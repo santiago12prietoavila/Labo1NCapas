@@ -45,6 +45,7 @@ static async Task RetreiveAsync()
     {
         try
         {
+            
             Expression<Func<Customer, bool>> criteria = c => c.FirstName == "Santiago" && c.LastName == "Avila";
             var customer = await repository.RetreiveAsync(criteria);
             if (customer != null)
